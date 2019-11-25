@@ -9,7 +9,7 @@
 
 #include "../include/PIDController.hpp"
 
-PidController::PidController() {
+PIDController::PIDController() {
     this->Kp = 0;
     this->Ki = 0;
     this->Kd = 0;
@@ -18,22 +18,22 @@ PidController::PidController() {
     this->threshold = 0;
 }
 
-void PidController::setGainValues(float _kp, float _ki, float _kd) {
+void PIDController::setGainValues(float _kp, float _ki, float _kd) {
     this->Kp = _kp;
     this->Ki = _ki;
     this->Kd = _kd;
 }
 
-void PidController::setThreshold(float _threshold) {
+void PIDController::setThreshold(float _threshold) {
     this->threshold = _threshold;
 }
 
-vector<float> PidController::getGainValues() {
+vector<float> PIDController::getGainValues() {
     vector<float> gains = {this->Kp, this->Ki, this->Kd};
     return gains;
 }
 
-void PidController::computePidError(float setPointVel,
+void PIDController::computePidError(float setPointVel,
                                     float inputVel,
                                     float prevError) {
     auto currentError = setPointVel - inputVel;
@@ -47,14 +47,9 @@ void PidController::computePidError(float setPointVel,
     cout << "New velocity is: " << controlError + inputVel << endl;
 }
 
-float PidController::getControlError() {
+float PIDController::getControlError() {
     return this->controlError;
 }
 
-// void PidController::printNewVelocity(float controlError, float inputVel) {
-//   double newVel = inputVel + controlError;
-//   cout <<"The new velocity is:" << newVel << endl;
-// }
-
-PidController::~PidController() {
+PIDController::~PIDController() {
 }

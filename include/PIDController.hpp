@@ -1,7 +1,7 @@
-/**@file pid_controller.hpp
+/**@file PIDController.hpp
  * @brief This file contains declarations for the
  * PID controller class    
- * @author     : Arjun Gupta
+ * @author     : Arjun Gupta, Kartik Madhira
  * @created on : Sep 27, 2019
  * @copyright  : This code is written for ENPM808X. Please
  *               cite if code is used.
@@ -18,12 +18,12 @@ using std::string;
 using std::endl;
 using std::flush;
 
-class PidController {
+class PIDController {
  public:
     /**
     * @brief default constructor
     */
-    PidController();
+    PIDController();
     /**
      * @brief This function sets the required gain values for 
      * the PID controller.
@@ -68,7 +68,7 @@ class PidController {
     /**
      * @brief Default Destructor
      */
-    ~PidController();
+    ~PIDController();
 
  private:
     /** Declares the variables for proportional gain, integral gain, 

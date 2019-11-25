@@ -1,6 +1,5 @@
 # PID Controller using Test Driven Development
-[![Build Status](https://travis-ci.org/Arjung27/PID-Controller.svg?branch=master)](https://travis-ci.org/Arjung27/PID-Controller)
-[![Coverage Status](https://coveralls.io/repos/github/Arjung27/PID-Controller/badge.svg?branch=master)](https://coveralls.io/github/Arjung27/PID-Controller?branch=master)
+[![Build Status](https://travis-ci.org/kartikmadhira1/PID-Controller.svg?branch=master)](https://travis-ci.org/kartikmadhira1/PID-Controller) [![Coverage Status](https://coveralls.io/repos/github/kartikmadhira1/PID-Controller/badge.svg?branch=master)](https://coveralls.io/github/kartikmadhira1/PID-Controller?branch=master)
 ---
 
 ## Authors
