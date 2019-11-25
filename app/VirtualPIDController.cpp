@@ -1,7 +1,7 @@
 /**@file VirtualPIDController.cpp
  * @brief This file containts definitions for functions
  * declared in header file.    
- * @author     : Arjun Gupta, Kartik Madhira
+ * @author     :Kartik Madhira
  * @created on : Sep 27, 2019
  * @copyright  : This code is written for ENPM808X. Please
  *               cite if code is used.

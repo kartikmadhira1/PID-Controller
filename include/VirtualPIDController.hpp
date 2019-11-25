@@ -1,7 +1,7 @@
 /**@file VirtualPIDController.hpp
  * @brief This file contains declarations for the
  * PID controller class    
- * @author     : Arjun Gupta, Kartik Madhira
+ * @author     : Kartik Madhira
  * @created on : Sep 27, 2019
  * @copyright  : This code is written for ENPM808X. Please
  *               cite if code is used.
