@@ -1,13 +1,13 @@
 /**@file pid_controller.cpp
  * @brief This file containts definitions for functions
  * declared in header file.    
- * @author     : Arjun Gupta
+ * @author     : Arjun Gupta, Kartik Madhira
  * @created on : Sep 27, 2019
  * @copyright  : This code is written for ENPM808X. Please
  *               cite if code is used.
  */
 
-#include "../include/pid_controller.hpp"
+#include "../include/PIDController.hpp"
 
 PidController::PidController() {
     this->Kp = 0;
