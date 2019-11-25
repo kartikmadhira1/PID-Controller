@@ -7,10 +7,10 @@
  *               cite if code is used.
  */
 
-#include "../include/pid_controller.hpp"
+#include "../include/PIDController.hpp"
 
 int main() {
-    PidController pid;
+    PIDController pid;
     pid.setGainValues(1, 2, 4);
     pid.setThreshold(10.0);
     vector<float> pidVector = pid.getGainValues();

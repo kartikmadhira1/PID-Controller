@@ -2,6 +2,7 @@ set(GTEST_SHUFFLE 1)
 
 add_executable(
     cpp-test
+    main.cpp
     mockTest.cpp
     ../app/PIDController.cpp
     ../app/VirtualPIDController.cpp

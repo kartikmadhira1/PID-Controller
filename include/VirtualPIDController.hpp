@@ -31,7 +31,7 @@ class VirtualPIDController {
      * @param _ki - This is the integral controller gain to be set. 
      * @param _kd - This is the differential controller gain to be set. 
      */
-    void setGainValues(float _kp, float _ki, float _kd);
+    virtual void setGainValues(float _kp, float _ki, float _kd) = 0;
     /**
      * @brief This function returns the gain values set by the user.
      * @return A float vector that contains the gain values
@@ -44,13 +44,20 @@ class VirtualPIDController {
      * @param _threshold This is a float type threshold value for the 
      * controller. 
      */
-    void setThreshold(float _threshold);
+    virtual void setThreshold(float _threshold) = 0;
+    /**
+     * @brief This function returns the error calculated by the PID controller
+     * at a given instant.
+     * @return A float value which denotes the PID controller error at an 
+     *         instant. 
+     */
+     float getControlError();
     /**
      * @brief Default Destructor
      */
     ~VirtualPIDController();
 
- private:
+ protected:
     /** Declares the variables for proportional gain, integral gain, 
      * differential gain and the threshold limit for saturation, in 
      * the same order.

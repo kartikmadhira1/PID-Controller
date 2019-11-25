@@ -18,21 +18,21 @@ VirtualPIDController::VirtualPIDController() {
     this->threshold = 0;
 }
 
-void VirtualPIDController::setGainValues(float _kp, float _ki, float _kd) {
-    this->Kp = _kp;
-    this->Ki = _ki;
-    this->Kd = _kd;
-}
+// virtual void VirtualPIDController::setGainValues(float _kp, float _ki, float _kd) {
+// }
 
-void VirtualPIDController::setThreshold(float _threshold) {
-    this->threshold = _threshold;
-}
+// virtual void VirtualPIDController::setThreshold(float _threshold) {
+//     this->threshold = _threshold;
+// }
 
 vector<float> VirtualPIDController::getGainValues() {
     vector<float> gains = {this->Kp, this->Ki, this->Kd};
     return gains;
 }
 
+float VirtualPIDController::getControlError() {
+    return this->controlError;
+}
 
-VirtualPIDController::~PIDController() {
+VirtualPIDController::~VirtualPIDController() {
 }

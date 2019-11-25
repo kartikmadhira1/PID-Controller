@@ -9,7 +9,7 @@
  *               cite if code is used.
  */
 #include <gtest/gtest.h>
-#include "../include/pid_controller.hpp"
+#include "../include/PIDController.hpp"
 
 /** 
  * @brief Test for setGainValues() function of the PidController class.
@@ -17,7 +17,7 @@
  * getGainValues() function are same or not.
  */
 TEST(checkValues, shouldPass) {
-  PidController pid;
+  PIDController pid;
   pid.setGainValues(2, 3, 4);
   vector<float> inputValues = {2.0, 3.0, 4.0};
   int i = 0;
@@ -36,7 +36,7 @@ TEST(checkValues, shouldPass) {
  * control error less than the threshold value.
  */
 TEST(checkFormula, shouldPass) {
-  PidController pid;
+  PIDController pid;
   pid.setGainValues(1, 2, 4);
   pid.setThreshold(10.0);
   pid.computePidError(5, 3, 2);
@@ -51,7 +51,7 @@ TEST(checkFormula, shouldPass) {
  * control error more than the threshold value.
  */
 TEST(checkBoundaryCondition, shouldPass) {
-  PidController pid;
+  PIDController pid;
   pid.setGainValues(1, 2, 4);
   pid.setThreshold(10.0);
   pid.computePidError(9, 4, 2);
