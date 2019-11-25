@@ -14,7 +14,7 @@
 
 class mockVirtualPIDController : public VirtualPIDController {
  public:
-    mockVirtualPIDController(){};
+    mockVirtualPIDController() {}
     /**
      * @brief This function implements the error formula for the PID controller
      * for a given set point and the input. This is calculated at a particular 
@@ -73,6 +73,6 @@ class mockVirtualPIDController : public VirtualPIDController {
      * @return float
      */
     MOCK_METHOD0(getThreshold, float());
-    virtual ~mockVirtualPIDController(){};
+    virtual ~mockVirtualPIDController() {}
 };
 

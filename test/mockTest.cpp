@@ -11,7 +11,7 @@
 #include <memory>
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-#include "mockVirtualPIDController.cpp"
+#include "mockVirtualPIDController.hpp"
 #include "../include/VirtualPIDController.hpp"
 #include "../include/PIDController.hpp"
 
