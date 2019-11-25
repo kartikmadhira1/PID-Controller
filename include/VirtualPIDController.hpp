@@ -53,6 +53,19 @@ class VirtualPIDController {
      */
      float getControlError();
     /**
+     * @brief This function implements the error formula for the PID controller
+     * for a given set point and the input. This is calculated at a particular 
+     * time instant. If the control error is beyond a certain limit then the 
+     * controller sets the control error to the value set by the setThreshold() 
+     * function.
+     * @param setPointVel This is the reference velocity to be tracked by the
+     *                    controller.
+     * @param inputVel  This is the input velocity to the controller.
+     * @param prevError This is the error from the previous instant at which 
+     *                  PID controller error was calculated. 
+     */
+    virtual void computePidError(float setPointVel, float inputVel, float prevError) = 0;
+    /**
      * @brief Default Destructor
      */
     ~VirtualPIDController();

@@ -13,22 +13,29 @@
 #include "mockVirtualPIDController.hpp"
 #include "../include/VirtualPIDController.hpp"
 #include "../include/PIDController.hpp"
-
+#include <memory>
 using ::testing::AtLeast;
 using ::testing::Return;
 using ::testing::_;
 
 
 /**
- * @brief Test if 
+ * @brief Checking if getGainValues is working
  */
 TEST(mockVirtualPIDControllerTest, getGainValues) {
-  auto gpid = new mockVirtualPIDController();
-  PIDController pid;
-  gpid->setGainValues(0.1, 0.2, 0.3);
-  std::cout << "Here" << gpid->getGainValues().size() << "\n";
-  EXPECT_CALL(*gpid, getGainValues()).
+    auto gpid = new mockVirtualPIDController;
+    gpid->setGainValues(0.1, 0.2, 0.3);
+    EXPECT_CALL(*gpid, getGainValues()).
         Times(1).WillRepeatedly(Return(vector<float> {0.1, 0.2, 0.3}));
-  pid.computePidError(9, 4, 2);
-  
+    gpid->computePidError(1,2,4);
+}
+/**
+ * @brief Checking if getThreshold is working
+ */
+TEST(mockVirtualPIDControllerTest, getThreshold) {
+    auto gpid = new mockVirtualPIDController();
+    gpid->setThreshold(0.1);
+    EXPECT_CALL(*gpid, getThreshold()).
+        Times(1).WillRepeatedly(Return(0.1));
+    gpid->computePidError(1,2,4);
 }

@@ -18,13 +18,6 @@ VirtualPIDController::VirtualPIDController() {
     this->threshold = 0;
 }
 
-// virtual void VirtualPIDController::setGainValues(float _kp, float _ki, float _kd) {
-// }
-
-// virtual void VirtualPIDController::setThreshold(float _threshold) {
-//     this->threshold = _threshold;
-// }
-
 vector<float> VirtualPIDController::getGainValues() {
     vector<float> gains = {this->Kp, this->Ki, this->Kd};
     return gains;
