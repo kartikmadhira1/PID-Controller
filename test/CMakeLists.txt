@@ -5,6 +5,7 @@ add_executable(
     main.cpp
     mockTest.cpp
     ../app/PIDController.cpp
+    mockVirtualPIDController.cpp
     ../app/VirtualPIDController.cpp
 )
 

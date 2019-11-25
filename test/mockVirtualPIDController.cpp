@@ -8,15 +8,13 @@
  *               cite if code is used.
  */
 
-#pragma once
-
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "../include/VirtualPIDController.hpp"
 
 class mockVirtualPIDController : public VirtualPIDController {
  public:
-
+    mockVirtualPIDController(){};
     /**
      * @brief This function implements the error formula for the PID controller
      * for a given set point and the input. This is calculated at a particular 
@@ -75,5 +73,6 @@ class mockVirtualPIDController : public VirtualPIDController {
      * @return float
      */
     MOCK_METHOD0(getThreshold, float());
+    virtual ~mockVirtualPIDController(){};
 };
 
